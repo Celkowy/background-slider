@@ -3,27 +3,22 @@ import Background from './Background.js'
 import Content from './Content.js'
 import { useState } from 'react'
 
+const images = [
+  'https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2022/04/15/07/58/sunset-7133867_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2022/04/23/17/16/cascade-7152189_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
+]
+
 function Slider() {
-  const [slideNumber, setSlideNumber] = useState(1)
-  function nextSlide() {
-    setSlideNumber(prev => ++prev)
-    if (slideNumber === 3) {
-      setSlideNumber(1)
-    }
-    console.log(slideNumber)
-  }
-
-  function previousSlide() {
-    setSlideNumber(prev => --prev)
-
-    if (slideNumber === 1) {
-      setSlideNumber(3)
-    }
+  const [active, setActive] = useState(0)
+  const changeSlide = n => {
+    setActive((active + n + images.length) % images.length)
   }
   return (
     <>
-      <Background slideNumber={slideNumber} />
-      <Content slideNumber={slideNumber} nextSlide={nextSlide} previousSlide={previousSlide} />
+      <Background active={active} url={images[active]} />
+      <Content active={active} changeSlide={changeSlide} images={images} />
     </>
   )
 }

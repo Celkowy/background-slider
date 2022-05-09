@@ -1,4 +1,4 @@
 function Background(props) {
-  return <img className="background" src={process.env.PUBLIC_URL + `/img/pic${props.slideNumber}.jpg`} />
+  return <img className="background" src={props.url} />
 }
 export default Background
