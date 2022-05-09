@@ -4,9 +4,9 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-position: center center; */
+  /* background-size: cover; */
   transition: 0.4s ease;
 }
 
@@ -43,8 +43,8 @@ body::after {
   opacity: 0;
   height: 100vh;
   width: 100vw;
-  background-position: center center;
-  background-size: cover;
+  /* background-position: center center;
+  background-size: cover; */
   position: absolute;
   top: -15vh;
   left: -15vw;
