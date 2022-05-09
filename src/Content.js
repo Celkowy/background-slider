@@ -2,7 +2,7 @@ function Content(props) {
   return (
     <div className="images-wrapper">
       {props.images.map((url, i) => (
-        <img key={i} className={`images ${i === props.active ? 'active' : ''}`} src={url} alt="image" />
+        <img key={i} className={`images ${i === props.active ? 'active' : ''}`} src={url} alt="im" />
       ))}
       <img
         className="content-background"
