@@ -7,7 +7,7 @@ function Content(props) {
         alt="content-background"
       />
       <img className="arrow arrow-right" src="/img/arrow-right.png" onClick={props.nextSlide} alt="arrow-right"></img>
-      <img className="arrow arrow-left" src="/img/arrow-left.png" onClick={props.previousSlide} alt="arrow-right"></img>
+      <img className="arrow arrow-left" src="/img/arrow-left.png" onClick={props.previousSlide} alt="arrow-left"></img>
     </div>
   )
 }
