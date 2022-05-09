@@ -1,4 +1,3 @@
-import './App.css'
 import Slider from './Slider.js'
 
 function App() {
