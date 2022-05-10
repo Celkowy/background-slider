@@ -4,10 +4,10 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  /* background-repeat: no-repeat; */
-  /* background-position: center center; */
-  /* background-size: cover; */
-  transition: 0.4s ease;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.8s ease-out;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
+  overflow: hidden;
 }
 
 body::after {
@@ -43,12 +44,12 @@ body::after {
   opacity: 0;
   height: 100vh;
   width: 100vw;
-  /* background-position: center center;
-  background-size: cover; */
   position: absolute;
+  background-position: center center;
+  background-size: cover;
   top: -15vh;
   left: -15vw;
-  transition: 0.8s ease;
+  transition: 0.4s ease;
   z-index: 2;
 }
 

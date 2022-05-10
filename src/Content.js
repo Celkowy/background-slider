@@ -1,14 +1,15 @@
 function Content(props) {
   return (
     <div className="images-wrapper">
-      {props.images.map((url, i) => (
-        <img key={i} className={`images ${i === props.active ? 'active' : ''}`} src={url} alt="im" />
+      {props.images.map((_, i) => (
+        <div
+          key={i}
+          className={`images ${i === props.active ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${props.url})` }}
+          alt="im"
+        ></div>
       ))}
-      <img
-        className="content-background"
-        src={process.env.PUBLIC_URL + `/img/pic${props.slideNumber}.jpg`}
-        alt="content-background"
-      />
+
       <img
         className="arrow arrow-right"
         src="/img/arrow-right.png"
@@ -21,7 +22,7 @@ function Content(props) {
         className="arrow arrow-left"
         src="/img/arrow-left.png"
         onClick={() => {
-          props.changeSlide(1)
+          props.changeSlide(-1)
         }}
         alt="arrow-left"
       ></img>
