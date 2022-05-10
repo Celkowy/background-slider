@@ -16,13 +16,10 @@ function Slider() {
   const [active, setActive] = useState(0)
   const changeSlide = change => {
     setActive((active + change + images.length) % images.length)
-    // if(active )
-    // if (isNext) setActive(prev => ++prev)
-    // else setActive(prev => --prev)
   }
   return (
     <>
-      <Background active={active} url={images[active]} images={images} />
+      <Background url={images[active]} />
       <Content active={active} changeSlide={changeSlide} url={images[active]} images={images} />
     </>
   )
