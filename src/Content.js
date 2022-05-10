@@ -12,7 +12,7 @@ function Content(props) {
 
       <img
         className="arrow arrow-right"
-        src="/img/arrow-right.png"
+        src="./img/arrow-right.png"
         onClick={() => {
           props.changeSlide(1)
         }}
@@ -20,7 +20,7 @@ function Content(props) {
       ></img>
       <img
         className="arrow arrow-left"
-        src="/img/arrow-left.png"
+        src="./img/arrow-left.png"
         onClick={() => {
           props.changeSlide(-1)
         }}
