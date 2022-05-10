@@ -4,12 +4,12 @@ import Content from './Content.js'
 import { useState } from 'react'
 
 const images = [
-  'https://images.unsplash.com/photo-1652041436330-a8c7ef3d1cb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-  'https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2022/04/15/07/58/sunset-7133867_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2022/04/23/17/16/cascade-7152189_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
-  'https://images.unsplash.com/photo-1652039033526-c08f804dc888?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+  'https://images.unsplash.com/photo-1652177412898-00c6204a1e58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80',
+  'https://images.unsplash.com/photo-1652043058252-7cfb295965c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2062&q=80',
+  'https://images.unsplash.com/photo-1652053533741-65527c3625a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+  'https://images.unsplash.com/photo-1651869924653-0a0f5d21067a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80',
+  'https://images.unsplash.com/photo-1652082200637-d04649c2a366?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+  'https://images.unsplash.com/photo-1649775391951-e3fdf0e7e7ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1162&q=80',
 ]
 
 function Slider() {
