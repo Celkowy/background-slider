@@ -89,7 +89,7 @@ body::after {
   border-left: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
 }
 
 .arrow-left:active {
