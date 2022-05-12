@@ -1,8 +1,8 @@
 import './Slider.css'
 import Background from './Background.js'
 import Content from './Content.js'
-import { useState } from 'react'
-
+import { useState, useRef } from 'react'
+import useKeypress from 'react-use-keypress'
 const images = [
   'https://images.unsplash.com/photo-1652177412898-00c6204a1e58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80',
   'https://images.unsplash.com/photo-1652043058252-7cfb295965c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2062&q=80',
@@ -17,6 +17,15 @@ function Slider() {
   const changeSlide = change => {
     setActive((active + change + images.length) % images.length)
   }
+
+  useKeypress(['ArrowLeft', 'ArrowRight', 'd', 'a'], event => {
+    if (event.key === 'ArrowLeft' || event.key === 'a') {
+      changeSlide(-1)
+    } else if (event.key === 'ArrowRight' || event.key === 'd') {
+      changeSlide(1)
+    }
+  })
+
   return (
     <>
       <Background url={images[active]} />

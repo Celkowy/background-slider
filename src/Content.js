@@ -1,6 +1,13 @@
+import useSwipe from './useSwipe'
+
 function Content(props) {
+  const bind = useSwipe({
+    onRight: () => props.changeSlide(1),
+    onLeft: () => props.changeSlide(1),
+  })
+
   return (
-    <div className="images-wrapper">
+    <div className="images-wrapper" {...bind()}>
       {props.images.map((_, i) => (
         <div
           key={i}
