@@ -38,6 +38,7 @@ body::after {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .images {

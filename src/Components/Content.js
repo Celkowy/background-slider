@@ -1,4 +1,4 @@
-import useSwipe from './useSwipe'
+import useSwipe from '../Lib/useSwipe'
 
 function Content(props) {
   const bind = useSwipe({

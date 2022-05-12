@@ -1,4 +1,4 @@
-import Slider from './Slider.js'
+import Slider from './Components/Slider'
 
 function App() {
   return (
