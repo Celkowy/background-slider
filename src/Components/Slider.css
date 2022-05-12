@@ -38,6 +38,7 @@ body::after {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .images {
@@ -72,25 +73,32 @@ body::after {
 }
 
 .arrow-right {
-  right: 0;
+  right: -5px;
   border-right: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   transition: 0.2s ease;
 }
 
-.arrow-right:hover {
+.arrow-right:active {
   right: -10px;
 }
 
 .arrow-left {
-  left: 0;
+  left: -5px;
   border-left: none;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  transition: 0.15s ease;
+  transition: 0.3s ease;
 }
 
-.arrow-left:hover {
+.arrow-left:active {
   left: -10px;
+}
+
+@media (max-width: 640px) {
+  .arrow {
+    width: 28px;
+    height: 28px;
+  }
 }
