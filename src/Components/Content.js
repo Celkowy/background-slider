@@ -1,15 +1,15 @@
-import useSwipe from '../Lib/useSwipe'
+import { useSwipeable } from 'react-swipeable'
 
 function Content(props) {
-  const bind = useSwipe({
-    onRight: () => props.changeSlide(-1),
-    onLeft: () => props.changeSlide(1),
-    onUp: () => {},
-    onDown: () => {},
+  const handlers = useSwipeable({
+    onSwiped: eventData => {
+      if (eventData.dir === 'Left') props.changeSlide(1)
+      else if (eventData.dir === 'Right') props.changeSlide(-1)
+    },
   })
 
   return (
-    <div className="images-wrapper" {...bind()}>
+    <div className="images-wrapper" {...handlers}>
       {props.images.map((_, i) => (
         <div
           key={i}
