@@ -4,6 +4,8 @@ function Content(props) {
   const bind = useSwipe({
     onRight: () => props.changeSlide(-1),
     onLeft: () => props.changeSlide(1),
+    onUp: () => {},
+    onDown: () => {},
   })
 
   return (

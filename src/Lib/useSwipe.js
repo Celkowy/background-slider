@@ -4,6 +4,8 @@ const anonFn = () => {}
 
 export default function useSwipe(
   actions = {
+    onUp: anonFn,
+    onDown: anonFn,
     onLeft: anonFn,
     onRight: anonFn,
   },
