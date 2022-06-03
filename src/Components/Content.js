@@ -1,6 +1,13 @@
 import { useSwipeable } from 'react-swipeable'
+import useSwipe from '../Lib/useSwipe'
 
 function Content(props) {
+  const detectDeviceType = () =>
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
+  console.log(detectDeviceType())
+
+  const deviceType = detectDeviceType()
+
   const handlers = useSwipeable({
     onSwiped: eventData => {
       if (eventData.dir === 'Left') props.changeSlide(1)
@@ -8,8 +15,15 @@ function Content(props) {
     },
   })
 
+  const bind = useSwipe({
+    onRight: () => props.changeSlide(1),
+    onLeft: () => props.changeSlide(1),
+    onUp: () => {},
+    onDown: () => {},
+  })
+  // {...bind()}
   return (
-    <div className="images-wrapper" {...handlers}>
+    <div className="images-wrapper"  {deviceType ? ...bind() : handlers}>
       {props.images.map((_, i) => (
         <div
           key={i}
